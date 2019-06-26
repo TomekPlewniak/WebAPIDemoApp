@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,8 +10,12 @@ namespace DemoAPI.Controllers
 {
     public class PeopleController : ApiController
     {
+        List<Person> people = new List<Person>();
+
+
+
         // GET: api/People
-        public IEnumerable<string> Get()
+        public List<Person> Get()
         {
             return new string[] { "value1", "value2" };
         }
@@ -23,11 +28,6 @@ namespace DemoAPI.Controllers
 
         // POST: api/People
         public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT: api/People/5
-        public void Put(int id, [FromBody]string value)
         {
         }
 
